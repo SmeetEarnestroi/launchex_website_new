@@ -1,101 +1,89 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowRight, Play, ShieldCheck } from "lucide-react";
 
 const Hero = () => {
+  const targetDate = new Date("2026-02-25T00:00:00");
 
   const calculateTimeLeft = () => {
-    const difference = +new Date("2026-02-25") - +new Date(); // Approx 21 days from now as placeholder or use fixed date
-    let timeLeft = {};
+    const difference = targetDate - new Date();
+    if (difference <= 0) return null;
 
-    if (difference > 0) {
-        timeLeft = {
-            DAYS: Math.floor(difference / (1000 * 60 * 60 * 24)),
-            HOURS: Math.floor((difference / (1000 * 60 * 60)) % 24),
-            MINUTES: Math.floor((difference / 1000 / 60) % 60),
-            SECONDS: Math.floor((difference / 1000) % 60),
-        };
-    }
-    return timeLeft;
-};
+    return {
+      DAYS: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      HOURS: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      MINUTES: Math.floor((difference / 1000 / 60) % 60),
+      SECONDS: Math.floor((difference / 1000) % 60),
+    };
+  };
 
-const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-  const timerComponents = Object.keys(timeLeft).map((interval) => {
-    return (
-        <div key={interval} className="flex flex-col items-center bg-white dark:bg-gray-800 shadow-lg rounded-xl p-3 sm:p-4 min-w-[70px] sm:min-w-[90px]">
-            <span className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400">
-                {timeLeft[interval].toString().padStart(2, '0')}
-            </span>
-            <span className="text-[10px] sm:text-xs uppercase text-gray-500 dark:text-gray-400 font-medium tracking-wider mt-1">
-                {interval === 'DAYS' && 'DEAYS' ? 'DAYS' : interval}
-            </span>
-        </div>
-    );
-});
-
-useEffect(() => {
-  const timer = setTimeout(() => {
+  useEffect(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
-  }, 1000);
-  return () => clearTimeout(timer);
-});
-
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-slate-950 pt-32 pb-24 md:pt-44 md:pb-32">
+    <section className="relative overflow-hidden bg-white dark:bg-slate-950 pt-32 pb-28 md:pt-44 md:pb-36 transition-colors duration-500">
 
-      {/* 🔵 Premium Background Effects */}
-      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] 
-        bg-linear-to-br from-launchex-main/30 via-launchex-secondary/20 to-transparent 
-        dark:from-launchex-main/20 dark:via-launchex-secondary/10 dark:to-transparent
-        blur-[140px] -z-10"></div>
+      {/* 🌈 Premium Background Glow */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] 
+        bg-linear-to-r from-launchex-main/30 via-launchex-secondary/20 to-transparent
+        blur-[160px] opacity-50 -z-10" />
 
-      <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] 
-        bg-launchex-secondary/20 blur-[120px] -z-10"></div>
+      <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] 
+        bg-launchex-secondary/20 blur-[140px] -z-10" />
 
-      <div className="container-custom text-center">
+      <div className="container-custom text-center relative z-10">
 
-        {/* 🔥 Badge */}
+        {/* 🛡 Premium Badge */}
         <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full
-          bg-launchex-main/10 text-launchex-main
-          font-semibold text-xs tracking-[0.15em] uppercase
-          border border-launchex-main/20 mb-2 backdrop-blur-md">
+          bg-white/60 dark:bg-white/5 backdrop-blur-xl
+          border border-launchex-main/20
+          text-launchex-main font-semibold text-xs tracking-widest uppercase mb-6">
 
           <ShieldCheck className="w-4 h-4" />
           Audited • Transparent • Fully Backed
         </div>
 
         {/* 🏆 Headline */}
-        <h1 className="text-5xl md:text-8xl font-black tracking-tight leading-[0.9] mb-8 text-slate-950 dark:text-white">
-          The Fair way to
+        <h1 className="text-5xl md:text-8xl font-black tracking-tight leading-[0.95] mb-8 text-slate-950 dark:text-white">
+          The Fair Way to
           <br className="hidden md:block" />
-          <span className="bg-linear-to-r from-launchex-main to-launchex-secondary bg-clip-text text-transparent pb-2">
-           Launch Meme Coins
+          <span className="bg-linear-to-r from-launchex-main to-launchex-secondary bg-clip-text text-transparent">
+            Launch Meme Coins
           </span>
         </h1>
 
         {/* 📝 Subtext */}
-        <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed font-medium">
-         No bots. No snipers. No insiders.
-         Just real people launching real meme coins.
+        <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-6 leading-relaxed font-medium">
+          No bots. No snipers. No insiders.  
+          Just real communities launching real meme coins.
         </p>
 
-        <h3>
-          LaunchEx is the world's first AI-powered meme coin launch exchange - built to protect communities and reward early believers.
-        </h3>
+        <p className="max-w-2xl mx-auto text-sm md:text-base text-slate-500 dark:text-slate-500 mb-12">
+          LaunchEx is the world’s first AI-powered meme coin launch exchange — 
+          built to protect communities and reward early believers.
+        </p>
 
         {/* 🎯 CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-5">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-14">
 
           {/* Primary CTA */}
           <button className="group relative inline-flex items-center gap-3
             px-10 py-4 rounded-2xl font-semibold text-lg text-white
             bg-linear-to-r from-launchex-main to-launchex-secondary
-            shadow-[0_10px_30px_-5px_rgba(96,165,250,0.5)]
-            hover:scale-105 hover:shadow-[0_15px_40px_-5px_rgba(124,58,237,0.4)] transition-all duration-300">
+            transition-all duration-300
+           
+           ">
 
-            Launch App
+            <span className="relative z-10">Launch App</span>
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+
+            {/* Glow Effect */}
+          
           </button>
 
           {/* Secondary CTA */}
@@ -108,48 +96,48 @@ useEffect(() => {
             transition-all duration-300">
 
             <Play className="w-5 h-5 fill-current" />
-            Read Documentation
+            Documentation
           </button>
         </div>
 
-          {/* Countdown Section */}
-          <div className="mb-12 animate-fadeInUp">
-                    <p className="text-xs text-center mt-10 sm:text-sm font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-4">
-                        IEO BEGINS IN
-                    </p>
-                    <div className="flex justify-center gap-3 sm:gap-4">
-                        {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+        {/* ⏳ Countdown Section */}
+        <div className="mb-12">
+          <p className="text-xs tracking-widest uppercase text-slate-500 dark:text-slate-400 mb-6 font-semibold">
+            IEO Begins In
+          </p>
+
+          {timeLeft ? (
+            <div className="flex justify-center gap-4 flex-wrap">
+              {Object.entries(timeLeft).map(([label, value]) => (
+                <div
+                  key={label}
+                  className="relative group w-[90px] sm:w-[110px]"
+                >
+                  <div className="rounded-2xl p-4 text-center
+                    bg-white/70 dark:bg-white/5
+                    backdrop-blur-xl
+                    border border-slate-200 dark:border-white/10
+                    shadow-lg">
+
+                    <div className="text-3xl font-bold bg-linear-to-r 
+                      from-launchex-main to-launchex-secondary 
+                      bg-clip-text text-transparent">
+                      {String(value).padStart(2, "0")}
                     </div>
+
+                    <div className="text-[10px] uppercase tracking-widest mt-2 text-slate-500 dark:text-slate-400">
+                      {label}
+                    </div>
+                  </div>
                 </div>
-
-        {/* 📊 Stats Card */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8  max-w-5xl mx-auto">
-
-          {[
-            { value: "$12.4M+", label: "Treasury Assets" },
-            { value: "31.2%", label: "Yield Distributed (APY)" },
-            { value: "142%", label: "Collateralization Ratio" },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="group rounded-3xl p-8
-                bg-white/70 dark:bg-slate-900/60
-                backdrop-blur-xl
-                border border-slate-100 dark:border-slate-800
-                shadow-xl
-                hover:shadow-2xl hover:-translate-y-2
-                transition-all duration-300 text-center"
-            >
-              <div className="text-4xl font-bold bg-linear-to-r from-launchex-main to-launchex-secondary bg-clip-text text-transparent mb-2">
-                {stat.value}
-              </div>
-              <div className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 font-medium">
-                {stat.label}
-              </div>
+              ))}
             </div>
-          ))}
-        </div> */}
-
+          ) : (
+            <span className="text-lg font-semibold text-launchex-main">
+              🚀 Live Now
+            </span>
+          )}
+        </div>
       </div>
     </section>
   );
