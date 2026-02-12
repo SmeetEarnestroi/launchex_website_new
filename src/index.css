@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* ================================
+   🎨 THEME TOKENS (Tailwind v4)
+================================ */
+@theme {
+
+  /* Font */
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* LaunchEx Brand Colors */
+  --color-launchex-main: #60a5fa;
+  --color-launchex-secondary: #7c3aed;
+
+  
+}
+
+/* ================================
+   🌍 Base Styles
+================================ */
+
+:root {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* ================================
+   ✨ Custom Utilities
+================================ */
+
+@utility section-padding {
+  @apply py-16 md:py-24;
+}
+
+@utility container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
