@@ -8,6 +8,7 @@ const Hero = () => {
       {/* 🔵 Premium Background Effects */}
       <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] 
         bg-linear-to-br from-launchex-main/30 via-launchex-secondary/20 to-transparent 
+        dark:from-launchex-main/20 dark:via-launchex-secondary/10 dark:to-transparent
         blur-[140px] -z-10"></div>
 
       <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] 
@@ -26,16 +27,16 @@ const Hero = () => {
         </div>
 
         {/* 🏆 Headline */}
-        <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight leading-tight mb-8 text-slate-900 dark:text-white">
-          Redefining  
+        <h1 className="text-5xl md:text-8xl font-black tracking-tight leading-[0.9] mb-8 text-slate-950 dark:text-white">
+          Redefining
           <br className="hidden md:block" />
-          <span className="bg-linear-to-r from-launchex-main to-launchex-secondary bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-launchex-main to-launchex-secondary bg-clip-text text-transparent pb-2">
             On-Chain Wealth Infrastructure
           </span>
         </h1>
 
         {/* 📝 Subtext */}
-        <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-12 leading-relaxed">
+        <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed font-medium">
           LaunchEx transforms treasury growth into real, sustainable yield for holders.
           100% collateralized, transparently managed, and powered by autonomous smart contracts.
           Built for long-term value — not short-term hype.
@@ -47,9 +48,9 @@ const Hero = () => {
           {/* Primary CTA */}
           <button className="group relative inline-flex items-center gap-3
             px-10 py-4 rounded-2xl font-semibold text-lg text-white
-            bg-launchex-main
+            bg-linear-to-r from-launchex-main to-launchex-secondary
             shadow-[0_10px_30px_-5px_rgba(96,165,250,0.5)]
-            hover:scale-105 transition-all duration-300">
+            hover:scale-105 hover:shadow-[0_15px_40px_-5px_rgba(124,58,237,0.4)] transition-all duration-300">
 
             Launch App
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

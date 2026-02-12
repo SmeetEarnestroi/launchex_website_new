@@ -3,33 +3,33 @@ import { Users, Shield, TrendingUp, HandCoins, BarChart3, ArrowRight, CircleDash
 
 const Economy = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-white dark:bg-slate-950 transition-colors duration-500">
             {/* --- Section: How LaunchEx Is Earned --- */}
-            <section className="py-24 px-6 border-t border-slate-50 bg-slate-50/20">
+            <section className="py-24 px-6 border-t border-slate-50 dark:border-slate-800 bg-slate-50/20 dark:bg-slate-900/10">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <div className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 font-bold text-[10px] uppercase tracking-widest mb-6 border border-amber-100">
                             Proof of Activity
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
-                            How LaunchEx Is <span className="text-launchex-main">Earned</span>
+                        <h2 className="text-4xl md:text-6xl font-black text-slate-950 dark:text-white mb-6 tracking-tight leading-tight">
+                            How LaunchEx Is <span className="bg-linear-to-r from-launchex-main to-launchex-secondary bg-clip-text text-transparent pb-2">Earned</span>
                         </h2>
-                        <p className="text-slate-500 font-medium text-lg">
+                        <p className="text-slate-600 dark:text-slate-400 font-medium text-lg md:text-xl max-w-2xl mx-auto">
                             LaunchEx is minted through four core activity channels.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
                         {/* Card 1 */}
-                        <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm relative group overflow-hidden">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-[32px] border border-slate-100 dark:border-slate-800 shadow-sm relative group overflow-hidden hover:shadow-xl transition-all duration-300">
                             <div className="flex justify-between items-start mb-10">
-                                <div className="w-12 h-12 bg-amber-50 text-launchex-main rounded-xl flex items-center justify-center">
+                                <div className="w-12 h-12 bg-amber-50 dark:bg-amber-900/20 text-launchex-main rounded-xl flex items-center justify-center">
                                     <Users className="w-6 h-6" />
                                 </div>
-                                <div className="px-3 py-1 bg-amber-50 rounded-full text-amber-600 text-[10px] font-black uppercase tracking-widest border border-amber-100">Island</div>
+                                <div className="px-3 py-1 bg-amber-50 dark:bg-amber-900/20 rounded-full text-amber-600 dark:text-amber-400 text-[10px] font-black uppercase tracking-widest border border-amber-100 dark:border-amber-800">Island</div>
                             </div>
-                            <h3 className="text-xl font-black text-slate-900 mb-4 tracking-tight">Account Creation Allocation</h3>
-                            <p className="text-slate-500 text-sm font-medium mb-6">100 LaunchEx credited on signup. Unlock through activity via the Golden Ratio.</p>
+                            <h3 className="text-2xl font-black text-slate-950 dark:text-white mb-4 tracking-tight">Account Creation Allocation</h3>
+                            <p className="text-slate-600 dark:text-slate-400 text-sm font-semibold mb-6">100 LaunchEx credited on signup. Unlock through activity via the Golden Ratio.</p>
                             <ul className="space-y-2 text-xs font-black text-slate-400 uppercase tracking-widest pl-1">
                                 <li>• 100 LaunchEx initially locked</li>
                                 <li>• 1 LaunchEx unlocked per $1 volume</li>
@@ -39,15 +39,15 @@ const Economy = () => {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm relative group overflow-hidden">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-[32px] border border-slate-100 dark:border-slate-800 shadow-sm relative group overflow-hidden hover:shadow-xl transition-all duration-500">
                             <div className="flex justify-between items-start mb-10">
-                                <div className="w-12 h-12 bg-primary-50 text-primary-500 rounded-xl flex items-center justify-center">
+                                <div className="w-12 h-12 bg-primary-50 dark:bg-primary-900/20 text-primary-500 rounded-xl flex items-center justify-center">
                                     <Shield className="w-6 h-6" />
                                 </div>
-                                <div className="px-3 py-1 bg-primary-50 rounded-full text-primary-600 text-[10px] font-black uppercase tracking-widest border border-primary-100">Protection</div>
+                                <div className="px-3 py-1 bg-primary-50 dark:bg-primary-900/20 rounded-full text-primary-600 dark:text-primary-400 text-[10px] font-black uppercase tracking-widest border border-primary-100 dark:border-primary-800">Protection</div>
                             </div>
-                            <h3 className="text-xl font-black text-slate-900 mb-4 tracking-tight">LossLess™ Trading Protection</h3>
-                            <p className="text-slate-500 text-sm font-medium mb-6">Get up to 10% of realized trading losses back in LaunchEx automatically.</p>
+                            <h3 className="text-2xl font-black text-slate-950 dark:text-white mb-4 tracking-tight">LossLess™ Trading Protection</h3>
+                            <p className="text-slate-600 dark:text-slate-400 text-sm font-semibold mb-6">Get up to 10% of realized trading losses back in LaunchEx automatically.</p>
                             <ul className="space-y-2 text-xs font-black text-slate-400 uppercase tracking-widest pl-1">
                                 <li>• 1 LaunchEx per $1 of loss</li>
                                 <li>• Up to 10 LaunchEx per loss event</li>
@@ -57,15 +57,15 @@ const Economy = () => {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm relative group overflow-hidden">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-[32px] border border-slate-100 dark:border-slate-800 shadow-sm relative group overflow-hidden hover:shadow-xl transition-all duration-500">
                             <div className="flex justify-between items-start mb-10">
-                                <div className="w-12 h-12 bg-amber-50 text-launchex-main rounded-xl flex items-center justify-center">
+                                <div className="w-12 h-12 bg-amber-50 dark:bg-amber-900/20 text-launchex-main rounded-xl flex items-center justify-center">
                                     <TrendingUp className="w-6 h-6" />
                                 </div>
-                                <div className="px-3 py-1 bg-amber-50 rounded-full text-amber-600 text-[10px] font-black uppercase tracking-widest border border-amber-100">Rewards</div>
+                                <div className="px-3 py-1 bg-amber-50 dark:bg-amber-900/20 rounded-full text-amber-600 dark:text-amber-400 text-[10px] font-black uppercase tracking-widest border border-amber-100 dark:border-amber-800">Rewards</div>
                             </div>
-                            <h3 className="text-xl font-black text-slate-900 mb-4 tracking-tight">Referral & Network Growth</h3>
-                            <p className="text-slate-500 text-sm font-medium mb-6">Earn fixed LaunchEx for every signup across levels.</p>
+                            <h3 className="text-2xl font-black text-slate-950 dark:text-white mb-4 tracking-tight">Active Rewards Pool</h3>
+                            <p className="text-slate-600 dark:text-slate-400 text-sm font-semibold mb-6">Earn LaunchEx rewards for every successful trade and prediction.</p>
                             <ul className="space-y-2 text-xs font-black text-slate-400 uppercase tracking-widest pl-1">
                                 <li>• L1: 10 LaunchEx per signup</li>
                                 <li>• L2: 1 LaunchEx • L3: 1 LaunchEx</li>
@@ -75,15 +75,15 @@ const Economy = () => {
                         </div>
 
                         {/* Card 4 */}
-                        <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm relative group overflow-hidden">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-[32px] border border-slate-100 dark:border-slate-800 shadow-sm relative group overflow-hidden hover:shadow-xl transition-all duration-500">
                             <div className="flex justify-between items-start mb-10">
-                                <div className="w-12 h-12 bg-amber-50 text-launchex-main rounded-xl flex items-center justify-center">
+                                <div className="w-12 h-12 bg-amber-50 dark:bg-amber-900/20 text-launchex-main rounded-xl flex items-center justify-center">
                                     <HandCoins className="w-6 h-6" />
                                 </div>
-                                <div className="px-3 py-1 bg-amber-50 rounded-full text-amber-600 text-[10px] font-black uppercase tracking-widest border border-amber-100">Builders</div>
+                                <div className="px-3 py-1 bg-amber-50 dark:bg-amber-900/20 rounded-full text-amber-600 dark:text-amber-400 text-[10px] font-black uppercase tracking-widest border border-amber-100 dark:border-amber-800">Builders</div>
                             </div>
-                            <h3 className="text-xl font-black text-slate-900 mb-4 tracking-tight">Grant Program</h3>
-                            <p className="text-slate-500 text-sm font-medium mb-6">Builders and creators receive milestone-based LaunchEx grants.</p>
+                            <h3 className="text-2xl font-black text-slate-950 dark:text-white mb-4 tracking-tight">Grant Program</h3>
+                            <p className="text-slate-600 dark:text-slate-400 text-sm font-semibold mb-6">Builders and creators receive milestone-based LaunchEx grants.</p>
                             <ul className="space-y-2 text-xs font-black text-slate-400 uppercase tracking-widest pl-1">
                                 <li>• Apply with your project</li>
                                 <li>• 20% on approval</li>
@@ -94,34 +94,34 @@ const Economy = () => {
                     </div>
 
                     {/* Golden Ratio Bar */}
-                    <div className="bg-white border border-slate-100 rounded-[28px] p-6 shadow-sm flex flex-col md:row items-center justify-between gap-6">
+                    <div className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[28px] p-6 shadow-sm flex flex-col md:row items-center justify-between gap-6">
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-primary-100 flex items-center justify-center rounded-xl text-primary-600">
+                            <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center rounded-xl text-primary-600 dark:text-primary-400">
                                 <BarChart3 className="w-6 h-6" />
                             </div>
                             <div>
-                                <h4 className="font-black text-slate-900 tracking-tight">Golden Ratio Unlock</h4>
+                                <h4 className="font-black text-slate-900 dark:text-white tracking-tight">Golden Ratio Unlock</h4>
                                 <p className="text-xs text-slate-400 font-bold tracking-tight">Your signup allocation unlocks 1:1 with trading volume.</p>
                             </div>
                         </div>
 
                         <div className="flex items-center gap-8 w-full md:w-auto">
                             <div className="flex-1 md:flex-none">
-                                <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">100 LaunchEx</div>
-                                <div className="text-sm font-black text-slate-900">Initial Allocation</div>
-                                <div className="text-[10px] text-slate-400 font-medium whitespace-nowrap">Credited on signup (locked)</div>
+                                <div className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-1">100 LaunchEx</div>
+                                <div className="text-sm font-black text-slate-950 dark:text-white">Initial Allocation</div>
+                                <div className="text-[10px] text-slate-500 dark:text-slate-400 font-semibold whitespace-nowrap">Credited on signup (locked)</div>
                             </div>
-                            <div className="h-10 w-px bg-slate-100 hidden md:block"></div>
+                            <div className="h-10 w-px bg-slate-100 dark:bg-slate-800 hidden md:block"></div>
                             <div className="flex-1 md:flex-none">
-                                <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">1:1</div>
-                                <div className="text-sm font-black text-slate-900">Golden Ratio</div>
-                                <div className="text-[10px] text-slate-400 font-medium whitespace-nowrap">1 LaunchEx per $1 volume</div>
+                                <div className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-1">1:1</div>
+                                <div className="text-sm font-black text-slate-950 dark:text-white">Golden Ratio</div>
+                                <div className="text-[10px] text-slate-500 dark:text-slate-400 font-semibold whitespace-nowrap">1 LaunchEx per $1 volume</div>
                             </div>
-                            <div className="h-10 w-px bg-slate-100 hidden md:block"></div>
+                            <div className="h-10 w-px bg-slate-100 dark:bg-slate-800 hidden md:block"></div>
                             <div className="flex-1 md:flex-none">
-                                <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">$100</div>
-                                <div className="text-sm font-black text-slate-900">Full Unlock</div>
-                                <div className="text-[10px] text-slate-400 font-medium whitespace-nowrap">Target volume at 100 LaunchEx</div>
+                                <div className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em] mb-1">Unlocked</div>
+                                <div className="text-sm font-black text-slate-950 dark:text-white">Wallet Transfer</div>
+                                <div className="text-[10px] text-slate-500 dark:text-slate-400 font-semibold whitespace-nowrap">Full utility unlocked at 100 LaunchEx</div>
                             </div>
                         </div>
                     </div>
@@ -129,13 +129,13 @@ const Economy = () => {
             </section>
 
             {/* --- Section: What Backs LaunchEx? --- */}
-            <section className="py-24 px-6 bg-white overflow-hidden">
+            <section className="py-24 px-6 bg-white dark:bg-slate-950 overflow-hidden">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-20 text-balance">
-                        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-none">
-                            What Backs LaunchEx?
+                        <h2 className="text-4xl md:text-7xl font-black text-slate-950 dark:text-white mb-6 tracking-tight leading-[0.9]">
+                            What Backs <span className="bg-linear-to-r from-launchex-main to-launchex-secondary bg-clip-text text-transparent pb-2">LaunchEx?</span>
                         </h2>
-                        <p className="text-slate-500 font-medium text-lg">
+                        <p className="text-slate-600 dark:text-slate-400 font-medium text-lg md:text-xl max-w-2xl mx-auto">
                             LaunchEx is not hype-backed. It is treasury-backed.
                         </p>
                     </div>
@@ -151,17 +151,17 @@ const Economy = () => {
                                 </div>
 
                                 {/* Floating labels around diagram */}
-                                <div className="absolute -top-10 left-10 py-3 px-6 bg-white shadow-xl rounded-2xl border border-slate-100 flex items-center gap-3">
+                                <div className="absolute -top-10 left-10 py-3 px-6 bg-white dark:bg-slate-900 shadow-xl rounded-2xl border border-slate-100 dark:border-slate-800 flex items-center gap-3">
                                     <span className="w-3 h-3 bg-launchex-main rounded-full"></span>
-                                    <span className="text-slate-800 font-black text-xs tracking-tight">USDT Pool</span>
+                                    <span className="text-slate-800 dark:text-white font-black text-xs tracking-tight">USDT Pool</span>
                                 </div>
-                                <div className="absolute top-1/2 -right-16 -translate-y-1/2 py-3 px-6 bg-white shadow-xl rounded-2xl border border-slate-100 flex items-center gap-3">
+                                <div className="absolute top-1/2 -right-16 -translate-y-1/2 py-3 px-6 bg-white dark:bg-slate-900 shadow-xl rounded-2xl border border-slate-100 dark:border-slate-800 flex items-center gap-3">
                                     <span className="w-3 h-3 bg-primary-400 rounded-full"></span>
-                                    <span className="text-slate-800 font-black text-xs tracking-tight">Escrow</span>
+                                    <span className="text-slate-800 dark:text-white font-black text-xs tracking-tight">Escrow</span>
                                 </div>
-                                <div className="absolute -bottom-10 left-20 py-3 px-6 bg-white shadow-xl rounded-2xl border border-slate-100 flex items-center gap-3">
+                                <div className="absolute -bottom-10 left-20 py-3 px-6 bg-white dark:bg-slate-900 shadow-xl rounded-2xl border border-slate-100 dark:border-slate-800 flex items-center gap-3">
                                     <span className="w-3 h-3 bg-launchex-main rounded-full"></span>
-                                    <span className="text-slate-800 font-black text-xs tracking-tight">Revenue</span>
+                                    <span className="text-slate-800 dark:text-white font-black text-xs tracking-tight">Revenue</span>
                                 </div>
                             </div>
                         </div>
@@ -170,36 +170,36 @@ const Economy = () => {
                             <div>
                                 <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Revenue Sources</div>
                                 <div className="space-y-4">
-                                    <div className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-between">
+                                    <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm flex items-center justify-between">
                                         <div className="flex items-center gap-4">
-                                            <div className="w-8 h-8 flex items-center justify-center bg-primary-50 text-launchex-main rounded-lg">
+                                            <div className="w-8 h-8 flex items-center justify-center bg-primary-50 dark:bg-primary-900/20 text-launchex-main rounded-lg">
                                                 <TrendingUp className="w-4 h-4" />
                                             </div>
-                                            <span className="text-slate-900 font-black text-sm tracking-tight">Trading Fees generated on Prex Markets</span>
+                                            <span className="text-slate-900 dark:text-white font-black text-sm tracking-tight">Trading Fees generated on Prex Markets</span>
                                         </div>
                                     </div>
-                                    <div className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-between">
+                                    <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm flex items-center justify-between">
                                         <div className="flex items-center gap-4">
-                                            <div className="w-8 h-8 flex items-center justify-center bg-primary-50 text-launchex-main rounded-lg">
+                                            <div className="w-8 h-8 flex items-center justify-center bg-primary-50 dark:bg-primary-900/20 text-launchex-main rounded-lg">
                                                 <Users className="w-4 h-4" />
                                             </div>
-                                            <span className="text-slate-900 font-black text-sm tracking-tight">Platform subscriptions</span>
+                                            <span className="text-slate-900 dark:text-white font-black text-sm tracking-tight">Platform subscriptions</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="bg-slate-50 border border-slate-100 p-8 rounded-3xl">
+                            <div className="bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 p-8 rounded-3xl">
                                 <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Smart Distribution Model</div>
                                 <p className="text-xs text-slate-500 font-medium mb-6">All protocol revenue is split automatically:</p>
                                 <div className="grid grid-cols-2 gap-4">
-                                    <div className="bg-primary-50 p-6 rounded-2xl border border-primary-100 text-center">
+                                    <div className="bg-primary-50 dark:bg-primary-900/20 p-6 rounded-2xl border border-primary-100 dark:border-primary-800 text-center">
                                         <div className="text-2xl font-black text-launchex-main mb-1">50%</div>
-                                        <div className="text-[10px] font-black text-primary-700 uppercase tracking-widest leading-none">Solvency Treasury</div>
+                                        <div className="text-[10px] font-black text-primary-700 dark:text-primary-400 uppercase tracking-widest leading-none">Solvency Treasury</div>
                                     </div>
-                                    <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-center">
-                                        <div className="text-2xl font-black text-amber-600 mb-1">50%</div>
-                                        <div className="text-[10px] font-black text-amber-700 uppercase tracking-widest leading-none">Community & Affiliates</div>
+                                    <div className="bg-amber-50 dark:bg-amber-900/20 p-6 rounded-2xl border border-amber-100 dark:border-amber-800 text-center">
+                                        <div className="text-2xl font-black text-amber-600 dark:text-amber-400 mb-1">50%</div>
+                                        <div className="text-[10px] font-black text-amber-700 dark:text-amber-400 uppercase tracking-widest leading-none">Community & Affiliates</div>
                                     </div>
                                 </div>
                             </div>
@@ -226,8 +226,8 @@ const Economy = () => {
                                 Community 50%
                             </div>
                         </div>
-                        <p className="text-slate-900 font-black text-lg mb-8 tracking-tight">The more the platform is used, the stronger LaunchEx becomes.</p>
-                        <button className="bg-launchex-main text-white px-10 py-3.5 rounded-full font-black text-sm uppercase tracking-widest hover:bg-primary-700 shadow-xl shadow-launchex-main/30">
+                        <p className="text-slate-900 dark:text-white font-black text-lg mb-8 tracking-tight">The more the platform is used, the stronger LaunchEx becomes.</p>
+                        <button className="bg-linear-to-r from-launchex-main to-launchex-secondary text-white px-10 py-3.5 rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 shadow-xl shadow-launchex-main/30 transition-all">
                             Go to Transparency Page
                         </button>
                     </div>
@@ -235,29 +235,29 @@ const Economy = () => {
             </section>
 
             {/* --- Section: Redeeming LaunchEx --- */}
-            <section className="py-24 px-6 bg-slate-50/20">
+            <section className="py-24 px-6 bg-slate-50/20 dark:bg-slate-900/10">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-primary-50 text-launchex-main font-bold text-[10px] uppercase tracking-widest mb-6 border border-primary-100">
+                        <div className="inline-block px-4 py-1.5 rounded-full bg-primary-50 dark:bg-primary-900/20 text-launchex-main font-bold text-[10px] uppercase tracking-widest mb-6 border border-primary-100 dark:border-primary-800">
                             Two Strategic Paths
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-none">
-                            Redeeming <span className="text-launchex-main">LaunchEx</span>
+                        <h2 className="text-4xl md:text-7xl font-black text-slate-950 dark:text-white mb-6 tracking-tight leading-[0.9]">
+                            Redeeming <span className="bg-linear-to-r from-launchex-main to-launchex-secondary bg-clip-text text-transparent pb-2">LaunchEx</span>
                         </h2>
-                        <p className="text-slate-500 font-medium text-lg">
+                        <p className="text-slate-600 dark:text-slate-400 font-medium text-lg md:text-xl max-w-2xl mx-auto">
                             LaunchEx gives users a choice: liquidity now or treasury later.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Path A */}
-                        <div className="bg-white p-10 rounded-[40px] border-2 border-launchex-main shadow-2xl shadow-launchex-main/5 relative group">
+                        <div className="bg-white dark:bg-slate-900 p-10 rounded-[40px] border-2 border-launchex-main shadow-2xl shadow-launchex-main/5 relative group">
                             <div className="inline-block px-3 py-1 bg-launchex-main text-white text-[10px] font-black uppercase tracking-widest rounded-full mb-8">Path A: USDT Liquidity</div>
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="w-12 h-12 bg-primary-50 text-launchex-main rounded-xl flex items-center justify-center">
+                                <div className="w-12 h-12 bg-primary-50 dark:bg-primary-900/20 text-launchex-main rounded-xl flex items-center justify-center">
                                     <CircleDashed className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-2xl font-black text-slate-900 tracking-tight">Redemption from Solvency Pool</h3>
+                                <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Redemption from Solvency Pool</h3>
                             </div>
                             <p className="text-primary-600 font-bold text-sm mb-6">Best for users seeking an immediate LaunchEx value.</p>
                             <ul className="space-y-4 mb-10">
@@ -281,40 +281,40 @@ const Economy = () => {
                         </div>
 
                         {/* Path B */}
-                        <div className="bg-white p-10 rounded-[40px] border border-launchex-main shadow-sm relative group">
+                        <div className="bg-white dark:bg-slate-900 p-10 rounded-[40px] border border-launchex-main shadow-sm relative group transition-all duration-500">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-launchex-main text-white text-[10px] font-black uppercase tracking-widest rounded-full mb-8">
                                 Path B: Long-term Value
                             </div>
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="w-12 h-12 bg-amber-50 text-launchex-main rounded-xl flex items-center justify-center">
+                                <div className="w-12 h-12 bg-amber-50 dark:bg-amber-900/20 text-launchex-main rounded-xl flex items-center justify-center">
                                     <TrendingUp className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-2xl font-black text-slate-900 tracking-tight">Redemption from PREX Treasury</h3>
+                                <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Redemption from PREX Treasury</h3>
                             </div>
-                            <p className="text-amber-600 font-bold text-sm mb-6">Best for long-term believers in Prex Markets.</p>
+                            <p className="text-amber-600 dark:text-amber-400 font-bold text-sm mb-6">Best for long-term believers in Prex Markets.</p>
                             <ul className="space-y-4 mb-10">
                                 <li className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 mt-0.5"><Zap className="w-3 h-3" /></div>
-                                    <span className="text-xs text-slate-500 font-bold leading-relaxed"><span className="text-slate-900">FDV Trigger: $1 Billion:</span> Conversion unlocks when PREX reaches $1B fully diluted valuation.</span>
+                                    <div className="w-5 h-5 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center text-amber-600 dark:text-amber-400 mt-0.5"><Zap className="w-3 h-3" /></div>
+                                    <span className="text-xs text-slate-500 dark:text-slate-400 font-bold leading-relaxed"><span className="text-slate-900 dark:text-white">FDV Trigger: $1 Billion:</span> Conversion unlocks when PREX reaches $1B fully diluted valuation.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 mt-0.5"><Zap className="w-3 h-3" /></div>
-                                    <span className="text-xs text-slate-500 font-bold leading-relaxed"><span className="text-slate-900">6-Month Streaming Vest:</span> PREX tokens released linearly over 6 months after conversion.</span>
+                                    <div className="w-5 h-5 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center text-amber-600 dark:text-amber-400 mt-0.5"><Zap className="w-3 h-3" /></div>
+                                    <span className="text-xs text-slate-500 dark:text-slate-400 font-bold leading-relaxed"><span className="text-slate-900 dark:text-white">6-Month Streaming Vest:</span> PREX tokens released linearly over 6 months after conversion.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 mt-0.5"><Zap className="w-3 h-3" /></div>
-                                    <span className="text-xs text-slate-500 font-bold leading-relaxed"><span className="text-slate-900">50% Treasury Cap:</span> Auto-liquidates at 50% usage, no on-chain reserves replenish.</span>
+                                    <div className="w-5 h-5 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center text-amber-600 dark:text-amber-400 mt-0.5"><Zap className="w-3 h-3" /></div>
+                                    <span className="text-xs text-slate-500 dark:text-slate-400 font-bold leading-relaxed"><span className="text-slate-900 dark:text-white">50% Treasury Cap:</span> Auto-liquidates at 50% usage, no on-chain reserves replenish.</span>
                                 </li>
                             </ul>
-                            <div className="bg-amber-50/50 p-6 rounded-2xl border border-amber-200">
-                                <div className="text-[10px] font-black text-amber-700 uppercase tracking-widest mb-2">Conversion Benefit:</div>
-                                <p className="text-sm font-bold text-slate-900 leading-relaxed italic">1:1 ratio + Potential upside if PREX appreciates during vest <br /> <span className="text-amber-600">Zero cost basis + growth exposure • pure alpha</span></p>
+                            <div className="bg-amber-50/50 dark:bg-amber-900/10 p-6 rounded-2xl border border-amber-200 dark:border-amber-800">
+                                <div className="text-[10px] font-black text-amber-700 dark:text-amber-400 uppercase tracking-widest mb-2">Conversion Benefit:</div>
+                                <p className="text-sm font-bold text-slate-900 dark:text-white leading-relaxed italic">1:1 ratio + Potential upside if PREX appreciates during vest <br /> <span className="text-amber-600 dark:text-amber-400">Zero cost basis + growth exposure • pure alpha</span></p>
                             </div>
                         </div>
                     </div>
 
                     <div className="text-center mt-12">
-                        <button className="bg-white border border-slate-200 px-8 py-3 rounded-full text-slate-900 font-black text-xs uppercase tracking-widest hover:bg-slate-50 shadow-sm flex items-center gap-3 mx-auto">
+                        <button className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-8 py-3 rounded-full text-slate-900 dark:text-white font-black text-xs uppercase tracking-widest hover:bg-slate-50 dark:hover:bg-slate-800 shadow-sm flex items-center gap-3 mx-auto transition-colors">
                             View Transparency Dashboard
                             <ArrowRight className="w-4 h-4" />
                         </button>

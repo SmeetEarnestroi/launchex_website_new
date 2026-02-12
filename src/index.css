@@ -11,8 +11,13 @@
   /* LaunchEx Brand Colors */
   --color-launchex-main: #60a5fa;
   --color-launchex-secondary: #7c3aed;
+}
 
-  
+/* Enable class-based dark mode in Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --dark-mode: selector(.dark);
 }
 
 /* ================================
@@ -24,16 +29,36 @@
   background-color: #ffffff;
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.dark {
-  background-color: #0f172a;
-  color: #ffffff;
+html.dark {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Apply transitions to all common themed elements */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+
+/* Ensure interactive hover effects remain snappy by overriding the global slow transition */
+.hover\:scale-105,
+.hover\:-translate-y-2,
+.group:hover .group-hover\:translate-x-1,
+.hover\:bg-slate-50,
+.dark\:hover\:bg-slate-800 {
+  transition-duration: 200ms !important;
 }
 
 /* ================================
