@@ -1,7 +1,46 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import { ArrowRight, Play, ShieldCheck } from "lucide-react";
 
 const Hero = () => {
+
+  const calculateTimeLeft = () => {
+    const difference = +new Date("2026-02-25") - +new Date(); // Approx 21 days from now as placeholder or use fixed date
+    let timeLeft = {};
+
+    if (difference > 0) {
+        timeLeft = {
+            DAYS: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            HOURS: Math.floor((difference / (1000 * 60 * 60)) % 24),
+            MINUTES: Math.floor((difference / 1000 / 60) % 60),
+            SECONDS: Math.floor((difference / 1000) % 60),
+        };
+    }
+    return timeLeft;
+};
+
+const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  const timerComponents = Object.keys(timeLeft).map((interval) => {
+    return (
+        <div key={interval} className="flex flex-col items-center bg-white dark:bg-gray-800 shadow-lg rounded-xl p-3 sm:p-4 min-w-[70px] sm:min-w-[90px]">
+            <span className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400">
+                {timeLeft[interval].toString().padStart(2, '0')}
+            </span>
+            <span className="text-[10px] sm:text-xs uppercase text-gray-500 dark:text-gray-400 font-medium tracking-wider mt-1">
+                {interval === 'DAYS' && 'DEAYS' ? 'DAYS' : interval}
+            </span>
+        </div>
+    );
+});
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+  }, 1000);
+  return () => clearTimeout(timer);
+});
+
+
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-950 pt-32 pb-24 md:pt-44 md:pb-32">
 
@@ -28,19 +67,22 @@ const Hero = () => {
 
         {/* 🏆 Headline */}
         <h1 className="text-5xl md:text-8xl font-black tracking-tight leading-[0.9] mb-8 text-slate-950 dark:text-white">
-          Redefining
+          The Fair way to
           <br className="hidden md:block" />
           <span className="bg-linear-to-r from-launchex-main to-launchex-secondary bg-clip-text text-transparent pb-2">
-            On-Chain Wealth Infrastructure
+           Launch Meme Coins
           </span>
         </h1>
 
         {/* 📝 Subtext */}
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed font-medium">
-          LaunchEx transforms treasury growth into real, sustainable yield for holders.
-          100% collateralized, transparently managed, and powered by autonomous smart contracts.
-          Built for long-term value — not short-term hype.
+         No bots. No snipers. No insiders.
+         Just real people launching real meme coins.
         </p>
+
+        <h3>
+          LaunchEx is the world's first AI-powered meme coin launch exchange - built to protect communities and reward early believers.
+        </h3>
 
         {/* 🎯 CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-5">
@@ -70,8 +112,18 @@ const Hero = () => {
           </button>
         </div>
 
+          {/* Countdown Section */}
+          <div className="mb-12 animate-fadeInUp">
+                    <p className="text-xs text-center mt-10 sm:text-sm font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-4">
+                        IEO BEGINS IN
+                    </p>
+                    <div className="flex justify-center gap-3 sm:gap-4">
+                        {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+                    </div>
+                </div>
+
         {/* 📊 Stats Card */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  max-w-5xl mx-auto">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8  max-w-5xl mx-auto">
 
           {[
             { value: "$12.4M+", label: "Treasury Assets" },
@@ -96,7 +148,7 @@ const Hero = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
       </div>
     </section>
