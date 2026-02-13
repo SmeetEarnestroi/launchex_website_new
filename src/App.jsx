@@ -9,6 +9,8 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 import { ThemeProvider } from './context/ThemeContext';
+import MemeCoinL from './components/MemeCoinL';
+import RoadmapL from './components/RoadmapL';
 
 function App() {
   return (
@@ -21,9 +23,10 @@ function App() {
           <Features />
           <Economy />
           <Utilities />
-          <Roadmap />
+          <MemeCoinL/>
+          <RoadmapL/>
+          {/* <Roadmap />
 
-          {/* FAQ Section with Read all FAQs link */}
           <div className="bg-slate-50/20 dark:bg-slate-900/10">
             <FAQ />
             <div className="text-center pb-24">
@@ -33,7 +36,7 @@ function App() {
             </div>
           </div>
 
-          {/* Final CTA Section */}
+          
           <section className="py-24 px-6 bg-white dark:bg-slate-950 text-center">
             <div className="max-w-4xl mx-auto">
               <div className="flex justify-center mb-10">
@@ -52,7 +55,7 @@ function App() {
                 Start Earning LaunchEx
               </button>
             </div>
-          </section>
+          </section> */}
         </main>
         <Footer />
       </div>

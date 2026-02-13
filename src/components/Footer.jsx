@@ -1,96 +1,134 @@
-import React from 'react';
-import { Twitter, Instagram, Mail } from 'lucide-react';
-import Logo from '../assests/logo.png';
-
+import React from "react";
+import {
+  Twitter,
+  Send,
+  Github,
+  Linkedin
+} from "lucide-react";
+import Logo from "../assests/logo.png";
 
 const Footer = () => {
-    return (
-        <footer className="bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 pt-24 pb-12 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-24">
+  const handleScrollTo = (id) => {
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-                    {/* Brand Info */}
-                    <div className="lg:col-span-1">
-                        <div className="flex items-center gap-2 mb-8">
-                            <div className="flex items-center gap-2 cursor-pointer">
-                                <img src={Logo} alt="" className='h-14' />
-                            </div>
-                        </div>
-                        <p className="text-slate-400 font-black text-[10px] uppercase tracking-widest leading-relaxed mb-4">
-                            The User-First Algorithmic Token
-                        </p>
-                        <p className="text-slate-500 font-medium text-xs leading-relaxed mb-10">
-                            Earned through activity. Backed by revenue. Built for real users.
-                        </p>
-                        <div className="flex gap-4">
-                            <Twitter className="w-5 h-5 text-slate-300 dark:text-slate-600 hover:text-launchex-main cursor-pointer transition-colors" />
-                            <Instagram className="w-5 h-5 text-slate-300 dark:text-slate-600 hover:text-launchex-main cursor-pointer transition-colors" />
-                            <Mail className="w-5 h-5 text-slate-300 dark:text-slate-600 hover:text-launchex-main cursor-pointer transition-colors" />
-                        </div>
-                    </div>
+  return (
+    <footer className="relative bg-white dark:bg-slate-950 border-t border-slate-200/60 dark:border-slate-800 pt-24 pb-12 transition-colors duration-300 overflow-hidden">
 
-                    {/* Links 1: PRODUCT */}
-                    <div>
-                        <h4 className="text-[10px] font-black text-slate-900 dark:text-white uppercase tracking-[0.2em] mb-8">PRODUCT</h4>
-                        <ul className="space-y-4 text-[13px] font-bold text-slate-400 dark:text-slate-500">
-                            <li><a href="#" className="hover:text-launchex-main transition-colors">How it Works</a></li>
-                            <li><a href="#" className="hover:text-launchex-main transition-colors">Earn LaunchEx</a></li>
-                            <li><a href="#" className="hover:text-launchex-main transition-colors">Transparency</a></li>
-                            <li><a href="#" className="hover:text-launchex-main transition-colors">Roadmap</a></li>
-                            <li><a href="#" className="hover:text-launchex-main transition-colors">LaunchEx Whitepaper</a></li>
-                        </ul>
-                    </div>
+      {/* Subtle Gradient Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-linear-to-r from-launchex-main/20 to-launchex-secondary/20 blur-3xl opacity-40 pointer-events-none" />
 
-                    {/* Links 2: RESOURCES */}
-                    <div>
-                        <h4 className="text-[10px] font-black text-slate-900 dark:text-white uppercase tracking-[0.2em] mb-8">RESOURCES</h4>
-                        <ul className="space-y-4 text-[13px] font-bold text-slate-400 dark:text-slate-500">
-                            <li><a href="#" className="hover:text-launchex-main transition-colors">Developers</a></li>
-                            <li><a href="#" className="hover:text-launchex-main transition-colors">API Reference</a></li>
-                            <li><a href="#" className="hover:text-launchex-main transition-colors">FAQ</a></li>
-                            <li><a href="#" className="hover:text-launchex-main transition-colors">About Prex Markets</a></li>
-                        </ul>
-                    </div>
+      <div className="relative max-w-7xl mx-auto px-6">
 
-                    {/* Links 3: COMPANY */}
-                    <div>
-                        <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] mb-8">COMPANY</h4>
-                        <ul className="space-y-4 text-[13px] font-bold text-slate-400">
-                            <li><a href="#" className="hover:text-primary-600 transition-colors">Contact Us</a></li>
-                            <li><a href="#" className="hover:text-primary-600 transition-colors">Careers</a></li>
-                            <li><a href="#" className="hover:text-primary-600 transition-colors">Press</a></li>
-                        </ul>
-                    </div>
+        {/* Top Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
 
-                    {/* Links 4: LEGAL */}
-                    <div>
-                        <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] mb-8">LEGAL</h4>
-                        <ul className="space-y-4 text-[13px] font-bold text-slate-400">
-                            <li><a href="#" className="hover:text-primary-600 transition-colors">Terms of Service</a></li>
-                            <li><a href="#" className="hover:text-primary-600 transition-colors">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:text-primary-600 transition-colors">Risk Disclosure</a></li>
-                        </ul>
-                    </div>
+          {/* Brand */}
+          <div>
+            <img src={Logo} alt="LaunchEx" className="h-14 mb-6 hover:scale-105 transition-transform duration-300" />
+
+            <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-slate-800 dark:text-white mb-4">
+              The Fair Way to Launch Meme Coins
+            </p>
+
+            <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-8">
+              Earned through activity. Backed by revenue. Built for real users.
+            </p>
+
+            {/* Social Icons */}
+            <div className="flex gap-4">
+              {[Twitter, Send, Github, Linkedin].map((Icon, index) => (
+                <div
+                  key={index}
+                  className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-linear-to-r hover:from-launchex-main hover:to-launchex-secondary hover:text-white transition-all duration-300 cursor-pointer"
+                >
+                  <Icon className="w-4 h-4" />
                 </div>
-
-                {/* Bottom Bar */}
-                <div className="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:row items-center justify-between gap-6">
-                    <p className="text-[10px] font-bold text-slate-400 dark:text-slate-600">
-                        © 2026 LaunchEx. All rights reserved.
-                    </p>
-                    <div className="flex items-center gap-3">
-                        <div className="px-3 py-1 bg-launchex-main/10 dark:bg-launchex-main/5 rounded-full flex items-center gap-2 border border-launchex-main/20">
-                            <div className="w-1.5 h-1.5 bg-launchex-main rounded-full animate-pulse"></div>
-                            <span className="text-[10px] font-black text-launchex-main uppercase tracking-widest">LaunchEx</span>
-                        </div>
-                        <p className="text-[10px] font-bold text-slate-400 dark:text-slate-600">LaunchEx is an algorithmic treasury-backed token</p>
-                    </div>
-                </div>
-
-
+              ))}
             </div>
-        </footer>
-    );
+          </div>
+
+          {/* Links */}
+          <div>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-widest mb-8">
+              Navigation
+            </h4>
+            <ul className="space-y-4 text-sm font-medium text-slate-500 dark:text-slate-400">
+              {[
+                { name: "Why Meme Coin Fail", id: "#economy" },
+                { name: "Fair Way to Launch", id: "#utilities" },
+                { name: "Upcoming Launches", id: "#launches" },
+                { name: "Roadmap", id: "#roadmap" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <button
+                    onClick={() => handleScrollTo(link.id)}
+                    className="hover:text-launchex-main transition-colors duration-300"
+                  >
+                    {link.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-widest mb-8">
+              Resources
+            </h4>
+            <ul className="space-y-4 text-sm font-medium text-slate-500 dark:text-slate-400">
+              <li className="hover:text-launchex-main cursor-pointer transition-colors">Docs</li>
+              <li className="hover:text-launchex-main cursor-pointer transition-colors">Whitepaper</li>
+              <li className="hover:text-launchex-main cursor-pointer transition-colors">Audit Report</li>
+              <li className="hover:text-launchex-main cursor-pointer transition-colors">Community</li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-widest mb-8">
+              Stay Updated
+            </h4>
+
+            <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
+              Get early access to launches and exclusive updates.
+            </p>
+
+            <div className="flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="bg-transparent flex-1 px-4 py-3 text-sm focus:outline-none text-slate-700 dark:text-white"
+              />
+              <button className="bg-linear-to-r from-launchex-main to-launchex-secondary text-white px-5 py-3 text-sm font-semibold hover:opacity-90 transition-all">
+                Join
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-slate-200/60 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+          <p className="text-slate-500 dark:text-slate-600">
+            © 2026 LaunchEx. All rights reserved.
+          </p>
+
+          <div className="flex gap-6 text-slate-500 dark:text-slate-600">
+            <span className="hover:text-launchex-main cursor-pointer transition-colors">
+              Privacy Policy
+            </span>
+            <span className="hover:text-launchex-main cursor-pointer transition-colors">
+              Terms of Service
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
