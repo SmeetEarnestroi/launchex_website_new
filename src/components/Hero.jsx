@@ -78,8 +78,12 @@ const Hero = () => {
             transition-all duration-300
            
            ">
-
-            <span className="relative z-10">Launch App</span>
+<a
+  href="https://app.launchex.ai/"
+  target="_blank"
+  rel="noopener noreferrer"
+> <span className="relative z-10">Launch App</span></a>
+           
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
 
             {/* Glow Effect */}

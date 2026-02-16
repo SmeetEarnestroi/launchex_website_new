@@ -1,7 +1,30 @@
-import React from "react";
+import React,{useState} from "react";
 import { Mail, CheckCircle2, Gift } from "lucide-react";
 
 const Features = () => {
+
+
+  const [email, setEmail] = useState('');
+  const [error, seterror] = useState("")
+
+  const handleReserve = () => {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+      seterror("")
+      if (!email || !emailRegex.test(email)) {
+        return seterror("Please enter a valid email address.");
+      }
+    
+      window.open(
+        `https://app.launchex.ai/signup?email=${encodeURIComponent(email)}`,
+        '_blank',
+        'noopener,noreferrer'
+      );
+    };
+
+
+
+
+
   return (
     <section className="relative py-16 px-4 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       
@@ -37,6 +60,8 @@ const Features = () => {
               
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="Enter your email"
                 className="w-full pl-12 pr-4 py-3 rounded-xl 
@@ -48,9 +73,11 @@ const Features = () => {
                   text-gray-900 dark:text-white
                   placeholder:text-gray-400"
               />
+              {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
             </div>
 
             <button
+             onClick={handleReserve}
               className="w-full py-3 rounded-xl text-white font-semibold
                 bg-linear-to-r from-[#60a5fa] to-[#7c3aed]
                 hover:scale-[1.02] active:scale-[0.98]

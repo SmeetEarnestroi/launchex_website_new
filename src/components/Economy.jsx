@@ -462,7 +462,8 @@ const Economy = () => {
     {/* CTA Button */}
     <div className="mt-10">
       <Link
-        to="/how-it-works"
+        to="https://app.launchex.ai"
+        target='_blank'
         className="inline-flex items-center gap-3 px-10 py-4 text-lg font-semibold text-white rounded-2xl 
         bg-linear-to-r from-[#60a5fa] to-[#7c3aed] 
         shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform duration-300"

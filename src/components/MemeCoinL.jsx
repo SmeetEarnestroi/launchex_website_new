@@ -5,19 +5,19 @@ export default function MemeCoinL() {
     {
       name: "RocketDoge",
       symbol: "RDOGE",
-      date: "2026-02-15",
+      date: "2026-03-31",
       allocation: "100,000,000",
     },
     {
       name: "MoonCat",
       symbol: "MCAT",
-      date: "2026-02-22",
+      date: "2026-03-31",
       allocation: "50,000,000",
     },
     {
       name: "FairPepe",
       symbol: "FPEPE",
-      date: "2026-03-01",
+      date: "2026-03-31",
       allocation: "200,000,000",
     },
   ];
@@ -134,8 +134,10 @@ export default function MemeCoinL() {
                   </div>
 
                   {/* CTA */}
+                  
                   <button
-                    className="w-full py-3 rounded-xl font-semibold text-white 
+                   onClick={() => window.open("https://app.launchex.ai", "_blank")}
+                    className="w-full cursor-pointer py-3 rounded-xl font-semibold text-white 
                     bg-linear-to-r from-[#60a5fa] to-[#7c3aed] 
                     shadow-md shadow-blue-500/20 
                     hover:scale-105 transition-transform duration-300"
@@ -164,7 +166,8 @@ export default function MemeCoinL() {
               </p>
 
               <button
-                className="px-10 py-4 rounded-xl font-semibold text-white 
+               onClick={() => window.open("https://app.launchex.ai", "_blank")}
+                className="px-10 py-4 cursor-pointer rounded-xl font-semibold text-white 
                 bg-linear-to-r from-[#60a5fa] to-[#7c3aed] 
                 hover:scale-105 transition-transform duration-300"
               >

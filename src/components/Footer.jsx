@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto px-6">
 
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
 
           {/* Brand */}
           <div>
@@ -89,7 +89,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div>
+          {/* <div>
             <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-widest mb-8">
               Stay Updated
             </h4>
@@ -108,7 +108,7 @@ const Footer = () => {
                 Join
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}
