@@ -63,10 +63,10 @@ const Hero = () => {
           Just real communities launching real meme coins.
         </p>
 
-        <p className="max-w-2xl mx-auto text-sm md:text-base text-slate-500 dark:text-slate-500 mb-12">
+        {/* <p className="max-w-2xl mx-auto text-sm md:text-base text-slate-500 dark:text-slate-500 mb-12">
           LaunchEx is the world’s first AI-powered meme coin launch exchange — 
           built to protect communities and reward early believers.
-        </p>
+        </p> */}
 
         {/* 🎯 CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-14">
