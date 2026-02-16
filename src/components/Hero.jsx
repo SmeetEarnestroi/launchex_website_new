@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ArrowRight, Play, ShieldCheck } from "lucide-react";
 
 const Hero = () => {
-  const targetDate = new Date("2026-02-25T00:00:00");
+  const targetDate = new Date("2026-03-31T00:00:00");
 
   const calculateTimeLeft = () => {
     const difference = targetDate - new Date();
@@ -59,7 +59,7 @@ const Hero = () => {
 
         {/* 📝 Subtext */}
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-6 leading-relaxed font-medium">
-          No bots. No snipers. No insiders.  
+          No bots. No snipers. No insiders.
           Just real communities launching real meme coins.
         </p>
 
@@ -78,16 +78,16 @@ const Hero = () => {
             transition-all duration-300
            
            ">
-<a
-  href="https://app.launchex.ai/"
-  target="_blank"
-  rel="noopener noreferrer"
-> <span className="relative z-10">Launch App</span></a>
-           
+            <a
+              href="https://app.launchex.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            > <span className="relative z-10">Launch App</span></a>
+
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
 
             {/* Glow Effect */}
-          
+
           </button>
 
           {/* Secondary CTA */}
